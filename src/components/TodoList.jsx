@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 
 const TodoList = ({ todo, todos, setTodos }) => {
-
     const [update, setUpdate] = useState('');
 
     const updateButtonHandler = (e) => {
