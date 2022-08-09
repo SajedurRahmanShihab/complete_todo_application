@@ -3,6 +3,9 @@ import React from 'react';
 const InsertTodo = ({ text, setText, todos, setTodos, setStatus }) => {
     const handleAdd = (e) => {
         e.preventDefault();
+        if (text === '') {
+            return
+        }
         setTodos(
             [
                 ...todos, {
