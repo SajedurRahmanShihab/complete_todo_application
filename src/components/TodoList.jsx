@@ -5,6 +5,9 @@ const TodoList = ({ todo, todos, setTodos }) => {
     const [update, setUpdate] = useState('');
 
     const updateButtonHandler = (e) => {
+        if (update === '') {
+            return
+        }
         setTodos(todos.map((el) => {
             if (el.id === todo.id) {
                 return {
